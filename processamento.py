@@ -17,7 +17,7 @@ def encontrarRoiPlaca(source):
 
     for c in contornos:
         perimetro = cv2.arcLength(c, True)
-        if perimetro < 500:
+        if perimetro < 200:
             continue            
 
         aprox = cv2.approxPolyDP(c, 0.02 * perimetro, True)
@@ -63,7 +63,7 @@ def ocrImagemRoiPlaca():
     print(saida)
 
 if __name__ == "__main__":
-    source = 'assets/carro4.jpg'
+    source = 'assets/carro1.jpeg'
     #encontrarRoiPlaca(source)
     #preProcessamentoRoi()
     ocrImagemRoiPlaca()
